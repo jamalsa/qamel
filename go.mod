@@ -1,4 +1,4 @@
-module github.com/go-qamel/qamel
+module github.com/jamalsa/qamel
 
 go 1.13
 
