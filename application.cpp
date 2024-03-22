@@ -15,7 +15,6 @@ void* App_NewApplication(int argc, char* argv) {
 		argvs[i] = (new QByteArray(aList.at(i)))->data();
 	}
 
-    QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     return new QApplication(argcs, argvs);
 }
 
