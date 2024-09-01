@@ -5,7 +5,7 @@ import (
 	"os"
 	fp "path/filepath"
 
-	"github.com/go-qamel/qamel"
+	"github.com/jamalsa/qamel"
 )
 
 func main() {

@@ -22,7 +22,7 @@ RUN curl -SL --retry 10 --retry-delay 60 -O \
 
 # Download Qt5 installation script
 RUN curl -SL --retry 10 --retry-delay 60 -O \
-    https://raw.githubusercontent.com/go-qamel/qamel/master/build/docker/installer-script.qs #0fabfd
+    https://raw.githubusercontent.com/jamalsa/qamel/master/build/docker/installer-script.qs #0fabfd
 
 # Install Qt5
 RUN chmod +x qt-opensource-linux-x64-$QT_VERSION.run && \
@@ -36,7 +36,7 @@ RUN rm -Rf /opt/Qt$QT_VERSION/Docs \
             /opt/Qt$QT_VERSION/Tools
 
 # Install Qamel
-RUN /usr/local/go/bin/go get -u github.com/go-qamel/qamel/cmd/qamel #0fabfd
+RUN /usr/local/go/bin/go get -u github.com/jamalsa/qamel/cmd/qamel #0fabfd
 
 # ========== END OF BASE ========== #
 
@@ -68,7 +68,7 @@ ENV PATH "/usr/lib/ccache:$PATH"
 # Copy Go and Qamel from base
 COPY --from=base /usr/local/go /usr/local/go
 COPY --from=base $GOPATH/bin $GOPATH/bin
-COPY --from=base $GOPATH/src/github.com/go-qamel/qamel $GOPATH/src/github.com/go-qamel/qamel
+COPY --from=base $GOPATH/src/github.com/jamalsa/qamel $GOPATH/src/github.com/jamalsa/qamel
 
 # Copy Qt5 from base
 COPY --from=base /opt/Qt$QT_VERSION /opt/Qt$QT_VERSION

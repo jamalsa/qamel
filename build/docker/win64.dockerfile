@@ -27,7 +27,7 @@ RUN apt-get -qq update && \
 # Copy Go and Qamel from linux
 COPY --from=linux /usr/local/go /usr/local/go
 COPY --from=linux $GOPATH/bin $GOPATH/bin
-COPY --from=linux $GOPATH/src/github.com/go-qamel/qamel $GOPATH/src/github.com/go-qamel/qamel
+COPY --from=linux $GOPATH/src/github.com/jamalsa/qamel $GOPATH/src/github.com/jamalsa/qamel
 
 # Copy MXE from base
 COPY --from=base /usr/lib/mxe /usr/lib/mxe

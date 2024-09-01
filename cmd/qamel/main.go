@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/go-qamel/qamel/internal/cmd"
+	"github.com/jamalsa/qamel/internal/cmd"
 )
 
 func main() {

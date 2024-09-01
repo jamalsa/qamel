@@ -8,8 +8,8 @@ import (
 	fp "path/filepath"
 	"strings"
 
-	"github.com/go-qamel/qamel/internal/config"
-	"github.com/go-qamel/qamel/internal/generator"
+	"github.com/jamalsa/qamel/internal/config"
+	"github.com/jamalsa/qamel/internal/generator"
 	"github.com/spf13/cobra"
 )
 
@@ -75,7 +75,7 @@ func buildHandler(cmd *cobra.Command, args []string) {
 	// only, which make it impossible to generate binding code there.
 	// Therefore, as workaround, Qamel in Go module *MUST* be used in
 	// vendor by using `go mod vendor`.
-	vendorDir := fp.Join(projectDir, "vendor", "github.com", "go-qamel", "qamel")
+	vendorDir := fp.Join(projectDir, "vendor", "github.com", "jamalsa", "qamel")
 	goModFile := fp.Join(projectDir, "go.mod")
 	usesGoModule := fileExists(goModFile)
 
@@ -101,7 +101,7 @@ func buildHandler(cmd *cobra.Command, args []string) {
 		if gopath == "" {
 			gopath = build.Default.GOPATH
 		}
-		qamelDir = fp.Join(gopath, "src", "github.com", "go-qamel", "qamel")
+		qamelDir = fp.Join(gopath, "src", "github.com", "jamalsa", "qamel")
 	}
 
 	// Make sure the Qamel directory exists

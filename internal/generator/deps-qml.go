@@ -8,7 +8,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/go-qamel/qamel/internal/config"
+	"github.com/jamalsa/qamel/internal/config"
 )
 
 var rxQmlImport = regexp.MustCompile(`^import\s+(Qt\S+)\s(\d)+.*$`)

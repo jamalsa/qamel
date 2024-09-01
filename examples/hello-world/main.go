@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/go-qamel/qamel"
+	"github.com/jamalsa/qamel"
 )
 
 func main() {

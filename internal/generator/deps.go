@@ -8,7 +8,7 @@ import (
 	fp "path/filepath"
 	"strings"
 
-	"github.com/go-qamel/qamel/internal/config"
+	"github.com/jamalsa/qamel/internal/config"
 )
 
 // CopyDependencies copies dependencies to output directory
