@@ -172,7 +172,7 @@ void QamelTableModel::swapRow(int i, int j) {
     if (i < 0 || i >= rowCount()) return;
     if (j < 0 || j >= rowCount()) return;
 
-    _contents.swap(i, j);
+    _contents.swapItemsAt(i, j);
     emit dataChanged(createIndex(i, 0), createIndex(i, columnCount()-1));
     emit dataChanged(createIndex(j, 0), createIndex(j, columnCount()-1));
 }
