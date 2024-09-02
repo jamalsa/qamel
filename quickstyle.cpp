@@ -9,7 +9,3 @@ void SetQuickStyle(char* style) {
 void SetQuickStyleFallback(char* style) {
     QQuickStyle::setFallbackStyle(QString(style));
 }
-
-void AddQuickStylePath(char* style) {
-    QQuickStyle::addStylePath(QString(style));
-}

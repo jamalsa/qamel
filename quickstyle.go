@@ -23,12 +23,3 @@ func SetQuickStyleFallback(style string) {
 	defer C.free(unsafe.Pointer(cStyle))
 	C.SetQuickStyleFallback(cStyle)
 }
-
-// AddQuickStylePath adds path as a directory where Qt Quick
-// Controls 2 searches for available styles. The path may be
-// any local filesystem directory or Qt Resource directory.
-func AddQuickStylePath(path string) {
-	cPath := C.CString(path)
-	defer C.free(unsafe.Pointer(cPath))
-	C.AddQuickStylePath(cPath)
-}
